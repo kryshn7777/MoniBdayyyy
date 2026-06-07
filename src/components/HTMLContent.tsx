@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function HTMLContent() {
   const baseUrl = import.meta.env.BASE_URL;
   const [isPlaying, setIsPlaying] = useState(false);
+  const [expandedImage, setExpandedImage] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -68,8 +69,8 @@ export default function HTMLContent() {
 
   return (
     <div id="main-content" ref={containerRef} style={{ position: 'relative', zIndex: 10 }}>
-      {/* Audio Element */}
-      <audio ref={audioRef} loop src="https://actions.google.com/sounds/v1/water/waves_crashing_on_rock_beach.ogg" />
+      {/* Audio Element - Happy Birthday Piano (Public Domain) */}
+      <audio ref={audioRef} loop src="https://upload.wikimedia.org/wikipedia/commons/6/69/Happy_Birthday_to_You_%28Piano%29.ogg" />
       
       {/* Fixed UI */}
       <div style={{ position: 'fixed', top: '2rem', right: '2rem', zIndex: 50 }}>
@@ -99,13 +100,13 @@ export default function HTMLContent() {
           
           {/* Left Side (Image 1) */}
           <div style={{ width: '35%' }}>
-            <img src={`${baseUrl}Images/1.jpeg`} alt="Memory 1" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float1 8s ease-in-out infinite' }} />
+            <img src={`${baseUrl}Images/1.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/1.jpeg`)} alt="Memory 1" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float1 8s ease-in-out infinite', cursor: 'zoom-in' }} />
           </div>
 
           {/* Right Side (Images 2 and 3 stacked) */}
           <div style={{ width: '30%', display: 'flex', flexDirection: 'column', gap: '4vh' }}>
-            <img src={`${baseUrl}Images/2.png`} alt="Memory 2" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float2 10s ease-in-out infinite' }} />
-            <img src={`${baseUrl}Images/3.png`} alt="Memory 3" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float3 12s ease-in-out infinite' }} />
+            <img src={`${baseUrl}Images/2.png`} onClick={() => setExpandedImage(`${baseUrl}Images/2.png`)} alt="Memory 2" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float2 10s ease-in-out infinite', cursor: 'zoom-in' }} />
+            <img src={`${baseUrl}Images/3.png`} onClick={() => setExpandedImage(`${baseUrl}Images/3.png`)} alt="Memory 3" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float3 12s ease-in-out infinite', cursor: 'zoom-in' }} />
           </div>
 
           {/* Vignette Overlay to blend seamlessly */}
@@ -129,10 +130,10 @@ export default function HTMLContent() {
         
         {/* Treasures Gallery */}
         <div className="fade-up treasures-gallery" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
-           <img src={`${baseUrl}Images/4.png`} alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-           <img src={`${baseUrl}Images/5.png`} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
-           <img src={`${baseUrl}Images/6.png`} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-           <img src={`${baseUrl}Images/7.png`} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
+           <img src={`${baseUrl}Images/4.png`} onClick={() => setExpandedImage(`${baseUrl}Images/4.png`)} alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
+           <img src={`${baseUrl}Images/5.png`} onClick={() => setExpandedImage(`${baseUrl}Images/5.png`)} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
+           <img src={`${baseUrl}Images/6.png`} onClick={() => setExpandedImage(`${baseUrl}Images/6.png`)} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
+           <img src={`${baseUrl}Images/7.png`} onClick={() => setExpandedImage(`${baseUrl}Images/7.png`)} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
         </div>
       </section>
 
@@ -218,6 +219,20 @@ export default function HTMLContent() {
           100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
         }
       `}</style>
+
+      {/* Image Lightbox Overlay */}
+      {expandedImage && (
+        <div 
+          onClick={() => setExpandedImage(null)}
+          style={{
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', zIndex: 9999,
+            display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'zoom-out',
+            backdropFilter: 'blur(10px)'
+          }}
+        >
+          <img src={expandedImage} alt="Expanded" style={{ maxHeight: '90vh', maxWidth: '90vw', borderRadius: '1rem', boxShadow: '0 0 50px rgba(255,107,107,0.3)', objectFit: 'contain' }} />
+        </div>
+      )}
     </div>
   );
 }
