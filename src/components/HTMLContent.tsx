@@ -126,7 +126,7 @@ export default function HTMLContent() {
 
       {/* Section 3: My Treasures of You */}
       <section style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '10vh 5vw' }}>
-        <h2 className="fade-up" style={{ fontSize: '3.5rem', color: '#FF6B6B', marginBottom: '4rem', textAlign: 'center', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>my treasures of you</h2>
+        <h2 className="fade-up" style={{ fontSize: '3rem', color: '#FF6B6B', marginBottom: '3rem', textAlign: 'center', textShadow: '0 2px 15px rgba(255,107,107,0.4)', letterSpacing: '4px', fontWeight: 'bold', textTransform: 'uppercase' }}>Few Treasures of You 💖</h2>
         
         {/* Treasures Gallery */}
         <div className="fade-up treasures-gallery" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
@@ -134,6 +134,7 @@ export default function HTMLContent() {
            <img src={`${baseUrl}Images/5.png`} onClick={() => setExpandedImage(`${baseUrl}Images/5.png`)} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
            <img src={`${baseUrl}Images/6.png`} onClick={() => setExpandedImage(`${baseUrl}Images/6.png`)} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
            <img src={`${baseUrl}Images/7.png`} onClick={() => setExpandedImage(`${baseUrl}Images/7.png`)} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
+           <img src={`${baseUrl}Images/8.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/8.jpeg`)} alt="Treasure 5" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
         </div>
       </section>
 
@@ -144,8 +145,18 @@ export default function HTMLContent() {
           <video ref={videoRef} src={`${baseUrl}Images/roblox.mp4`} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} playsInline></video>
         </div>
         <p className="fade-up" style={{ marginTop: '1.5rem', fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>
-          our first robolox game by the way
+          our first roblox game by the way
         </p>
+      </section>
+
+      {/* Apology & Love Section */}
+      <section style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5vh 5vw', position: 'relative' }}>
+        <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '800px', background: 'rgba(20, 10, 15, 0.6)', padding: '3rem', borderRadius: '2rem', border: '1px solid rgba(255,107,107,0.3)', backdropFilter: 'blur(10px)', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
+          <img src={`${baseUrl}Images/sorry.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/sorry.jpeg`)} alt="Sorry" style={{ width: '100%', maxWidth: '300px', borderRadius: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', cursor: 'zoom-in', transform: 'rotate(-2deg)' }} />
+          <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'rgba(255,255,255,0.95)', textShadow: '0 2px 5px rgba(0,0,0,0.8)', textAlign: 'center', fontStyle: 'italic' }}>
+            "For all the BS you have been keeping up with me, those I did intentionally and unintentionally 😅 I value you much more than others 🥺 I really, really love you, and you are one of the most real people in my life 💖 Thank you for tolerating me. I am so grateful you appeared in my life ✨"
+          </p>
+        </div>
       </section>
 
       {/* Section 8: Full Bloom */}
