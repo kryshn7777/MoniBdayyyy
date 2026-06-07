@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HTMLContent() {
+  const baseUrl = import.meta.env.BASE_URL;
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -94,24 +95,24 @@ export default function HTMLContent() {
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
         
         {/* Dreamy Memory Backdrop */}
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5vh 10vw', overflow: 'hidden' }}>
+        <div className="hero-images" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5vh 10vw', overflow: 'hidden' }}>
           
           {/* Left Side (Image 1) */}
           <div style={{ width: '35%' }}>
-            <img src="/Images/1.jpeg" alt="Memory 1" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float1 8s ease-in-out infinite' }} />
+            <img src={`${baseUrl}Images/1.jpeg`} alt="Memory 1" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float1 8s ease-in-out infinite' }} />
           </div>
 
           {/* Right Side (Images 2 and 3 stacked) */}
           <div style={{ width: '30%', display: 'flex', flexDirection: 'column', gap: '4vh' }}>
-            <img src="/Images/2.png" alt="Memory 2" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float2 10s ease-in-out infinite' }} />
-            <img src="/Images/3.png" alt="Memory 3" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float3 12s ease-in-out infinite' }} />
+            <img src={`${baseUrl}Images/2.png`} alt="Memory 2" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float2 10s ease-in-out infinite' }} />
+            <img src={`${baseUrl}Images/3.png`} alt="Memory 3" style={{ width: '100%', height: 'auto', borderRadius: '1vw', opacity: 0.7, animation: 'float3 12s ease-in-out infinite' }} />
           </div>
 
           {/* Vignette Overlay to blend seamlessly */}
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(11,12,16,0.3) 0%, rgba(11,12,16,1) 85%)', pointerEvents: 'none' }}></div>
         </div>
 
-        <h1 className="fade-up" style={{ fontSize: '4vw', textAlign: 'center', textShadow: '0 4px 20px rgba(0,0,0,0.8)', zIndex: 1, position: 'relative' }}>
+        <h1 className="fade-up hero-h1" style={{ fontSize: '4vw', textAlign: 'center', textShadow: '0 4px 20px rgba(0,0,0,0.8)', zIndex: 1, position: 'relative' }}>
           A year ago, one text changed everything...
         </h1>
         <div className="fade-up" style={{ position: 'absolute', bottom: '10vh', animation: 'pulse 2s infinite', zIndex: 1 }}>
@@ -127,19 +128,19 @@ export default function HTMLContent() {
         <h2 className="fade-up" style={{ fontSize: '3.5rem', color: '#FF6B6B', marginBottom: '4rem', textAlign: 'center', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>my treasures of you</h2>
         
         {/* Treasures Gallery */}
-        <div className="fade-up" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
-           <img src="/Images/4.png" alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-           <img src="/Images/5.png" alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
-           <img src="/Images/6.png" alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
-           <img src="/Images/7.png" alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
+        <div className="fade-up treasures-gallery" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
+           <img src={`${baseUrl}Images/4.png`} alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+           <img src={`${baseUrl}Images/5.png`} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
+           <img src={`${baseUrl}Images/6.png`} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }} />
+           <img src={`${baseUrl}Images/7.png`} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem' }} />
         </div>
       </section>
 
       {/* Section 7: Behaving Like Us */}
       <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <h2 className="fade-up" style={{ fontSize: '3rem', marginBottom: '2rem' }}>Behaving Like Us</h2>
-        <div className="fade-up" style={{ width: '60vw', maxWidth: '800px', aspectRatio: '16/9', background: 'black', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.5)' }}>
-          <video ref={videoRef} src="/Images/roblox.mp4" controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} playsInline></video>
+        <div className="fade-up video-container" style={{ width: '60vw', maxWidth: '800px', aspectRatio: '16/9', background: 'black', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.5)' }}>
+          <video ref={videoRef} src={`${baseUrl}Images/roblox.mp4`} controls style={{ width: '100%', height: '100%', objectFit: 'cover' }} playsInline></video>
         </div>
         <p className="fade-up" style={{ marginTop: '1.5rem', fontSize: '1.2rem', color: 'rgba(255,255,255,0.7)', fontStyle: 'italic' }}>
           our first robolox game by the way
@@ -152,7 +153,7 @@ export default function HTMLContent() {
           🎉🎂 Happiesstttttt Birthday Bujjussssss 🥳💖
         </h1>
         
-        <div className="fade-up" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,107,107,0.2)' }}>
+        <div className="fade-up full-bloom-container" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,107,107,0.2)' }}>
           <p style={{ marginBottom: '1.5rem' }}>
             Whenever I wake up, I check for your texts. 🥹💕 You are such a beautiful soul. ✨ I just wish we were living together physically. 🫂❤️
           </p>

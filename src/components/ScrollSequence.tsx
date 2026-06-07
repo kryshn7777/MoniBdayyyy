@@ -21,7 +21,7 @@ export default function ScrollSequence() {
 
     const frameCount = 112;
     const currentFrame = (index: number) => (
-      `/Frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
+      `${import.meta.env.BASE_URL}Frames/ezgif-frame-${(index + 1).toString().padStart(3, '0')}.jpg`
     );
 
     const images: HTMLImageElement[] = [];
