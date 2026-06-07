@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <ReactLenis root options={{ smoothWheel: true, syncTouch: true }}>
+    <ReactLenis root options={{ smoothWheel: true }}>
       <Scene />
       <HTMLContent />
     </ReactLenis>

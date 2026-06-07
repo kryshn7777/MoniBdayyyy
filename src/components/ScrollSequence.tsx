@@ -56,14 +56,14 @@ export default function ScrollSequence() {
       frame: frameCount - 1,
       snap: "frame",
       ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "+=40%", // Super short and fast swiping sequence
-        scrub: 0.5,
-        pin: true,
-        onUpdate: render
-      }
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=100%", // Fixed glitchy short pin by making it a full viewport height
+          scrub: 0.1, // Very fast scrub to feel responsive without lagging
+          pin: true,
+          onUpdate: render
+        }
     });
 
   }, { scope: containerRef });

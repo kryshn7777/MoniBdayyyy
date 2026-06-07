@@ -91,7 +91,6 @@ export default function HTMLContent() {
             padding: '1rem', 
             color: 'white',
             cursor: 'pointer',
-            backdropFilter: 'blur(10px)',
             transition: 'all 0.3s ease'
           }}
         >
@@ -163,7 +162,7 @@ export default function HTMLContent() {
 
       {/* Apology & Love Section */}
       <section style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '5vh 5vw', position: 'relative' }}>
-        <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '800px', background: 'rgba(20, 10, 15, 0.6)', padding: '3rem', borderRadius: '2rem', border: '1px solid rgba(255,107,107,0.3)', backdropFilter: 'blur(10px)', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
+        <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem', maxWidth: '800px', background: 'rgba(20, 10, 15, 0.6)', padding: '3rem', borderRadius: '2rem', border: '1px solid rgba(255,107,107,0.3)', boxShadow: '0 20px 50px rgba(0,0,0,0.5)' }}>
           <img src={`${baseUrl}Images/sorry.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/sorry.jpeg`)} alt="Sorry" style={{ width: '100%', maxWidth: '300px', borderRadius: '1rem', boxShadow: '0 10px 30px rgba(0,0,0,0.4)', cursor: 'zoom-in', transform: 'rotate(-2deg)' }} />
           <p style={{ fontSize: '1.4rem', lineHeight: '1.8', color: 'rgba(255,255,255,0.95)', textShadow: '0 2px 5px rgba(0,0,0,0.8)', textAlign: 'center', fontStyle: 'italic' }}>
             "For all the BS you have been keeping up with me, those I did intentionally and unintentionally 😅 I value you much more than others 🥺 I really, really love you, and you are one of the most real people in my life 💖 Thank you for tolerating me. I am so grateful you appeared in my life ✨"
@@ -177,7 +176,7 @@ export default function HTMLContent() {
           🎉🎂 Happiesstttttt Birthday Bujjussssss 🥳💖
         </h1>
         
-        <div className="full-bloom-container" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,107,107,0.2)' }}>
+        <div className="full-bloom-container" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', border: '1px solid rgba(255,107,107,0.2)' }}>
           <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             Whenever I wake up, I check for your texts. 🥹💕 You are such a beautiful soul. ✨ I just wish we were living together physically. 🫂❤️
           </p>
@@ -248,9 +247,8 @@ export default function HTMLContent() {
         <div 
           onClick={() => setExpandedImage(null)}
           style={{
-            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', zIndex: 9999,
-            display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'zoom-out',
-            backdropFilter: 'blur(10px)'
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.9)', zIndex: 9999,
+            display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'zoom-out'
           }}
         >
           <img src={expandedImage} alt="Expanded" style={{ maxHeight: '90vh', maxWidth: '90vw', borderRadius: '1rem', boxShadow: '0 0 50px rgba(255,107,107,0.3)', objectFit: 'contain' }} />
