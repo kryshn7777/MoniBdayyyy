@@ -59,7 +59,7 @@ export default function ScrollSequence() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=200%", // Pin and scroll for 200% of viewport height
+        end: "+=100%", // Pin and scroll for 100% of viewport height (faster swiping)
         scrub: 0.5,
         pin: true,
         onUpdate: render
@@ -77,15 +77,15 @@ export default function ScrollSequence() {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '60vw',
-        height: '60vw',
-        maxWidth: '600px',
-        maxHeight: '600px',
+        width: '80vw',
+        height: '80vw',
+        maxWidth: '800px',
+        maxHeight: '800px',
         borderRadius: '50%',
         overflow: 'hidden',
-        boxShadow: '0 0 80px 30px rgba(255, 107, 107, 0.4)', // Bloom effect
-        maskImage: 'radial-gradient(circle, black 65%, transparent 95%)',
-        WebkitMaskImage: 'radial-gradient(circle, black 65%, transparent 95%)',
+        boxShadow: '0 0 100px 40px rgba(255, 107, 107, 0.4)', // Bloom effect
+        maskImage: 'radial-gradient(circle, black 80%, transparent 100%)',
+        WebkitMaskImage: 'radial-gradient(circle, black 80%, transparent 100%)',
         zIndex: 5
       }}>
         <canvas ref={canvasRef} style={{ width: '100%', height: '100%', filter: 'contrast(1.1) brightness(1.1)' }} />
