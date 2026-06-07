@@ -129,12 +129,12 @@ export default function HTMLContent() {
         <h2 className="fade-up" style={{ fontSize: '3rem', color: '#FF6B6B', marginBottom: '3rem', textAlign: 'center', textShadow: '0 2px 15px rgba(255,107,107,0.4)', letterSpacing: '4px', fontWeight: 'bold', textTransform: 'uppercase' }}>Few Treasures of You 💖</h2>
         
         {/* Treasures Gallery */}
-        <div className="fade-up treasures-gallery" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
-           <img src={`${baseUrl}Images/4.png`} onClick={() => setExpandedImage(`${baseUrl}Images/4.png`)} alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
-           <img src={`${baseUrl}Images/5.png`} onClick={() => setExpandedImage(`${baseUrl}Images/5.png`)} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
-           <img src={`${baseUrl}Images/6.png`} onClick={() => setExpandedImage(`${baseUrl}Images/6.png`)} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
-           <img src={`${baseUrl}Images/7.png`} onClick={() => setExpandedImage(`${baseUrl}Images/7.png`)} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
-           <img src={`${baseUrl}Images/8.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/8.jpeg`)} alt="Treasure 5" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
+        <div className="treasures-gallery" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '3vw', width: '100%', maxWidth: '1000px' }}>
+           <img className="fade-up" src={`${baseUrl}Images/4.png`} onClick={() => setExpandedImage(`${baseUrl}Images/4.png`)} alt="Treasure 1" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
+           <img className="fade-up" src={`${baseUrl}Images/5.png`} onClick={() => setExpandedImage(`${baseUrl}Images/5.png`)} alt="Treasure 2" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
+           <img className="fade-up" src={`${baseUrl}Images/6.png`} onClick={() => setExpandedImage(`${baseUrl}Images/6.png`)} alt="Treasure 3" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-2deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
+           <img className="fade-up" src={`${baseUrl}Images/7.png`} onClick={() => setExpandedImage(`${baseUrl}Images/7.png`)} alt="Treasure 4" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(4deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', marginTop: '2rem', cursor: 'zoom-in' }} />
+           <img className="fade-up" src={`${baseUrl}Images/8.jpeg`} onClick={() => setExpandedImage(`${baseUrl}Images/8.jpeg`)} alt="Treasure 5" style={{ width: '200px', height: '280px', objectFit: 'cover', borderRadius: '1rem', transform: 'rotate(-3deg)', border: '2px solid rgba(255,255,255,0.2)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', cursor: 'zoom-in' }} />
         </div>
       </section>
 
@@ -165,36 +165,36 @@ export default function HTMLContent() {
           🎉🎂 Happiesstttttt Birthday Bujjussssss 🥳💖
         </h1>
         
-        <div className="fade-up full-bloom-container" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,107,107,0.2)' }}>
-          <p style={{ marginBottom: '1.5rem' }}>
+        <div className="full-bloom-container" style={{ fontSize: '1.3rem', maxWidth: '800px', lineHeight: '1.8', color: 'rgba(255,255,255,0.9)', textShadow: '0 2px 10px rgba(0,0,0,0.8)', background: 'rgba(11,12,16,0.5)', padding: '3rem', borderRadius: '2rem', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,107,107,0.2)' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             Whenever I wake up, I check for your texts. 🥹💕 You are such a beautiful soul. ✨ I just wish we were living together physically. 🫂❤️
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             I still remember last year when me and Snek 🐍 were shopping, and I was busy putting your images on a cat video template 😭🐱 hehehe. But this time, I decided to increase the effortttt because that's what you deserve. 💖✨ I just wish I could gift you something on your birthday. 🎁🥺 Evalo try panniyum, I can't 😭, maybe God is planning to gift you physically instead? 👀💝
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             I cherish the moments I was with you. 🌸💕
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             I loved it when you kept the DP of my drawing as your PFP. 🥹🎨❤️ I love everything about you, myruuuu. 💖
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             Especially your voice when you're mad and angry. 😤❤️ I love it far, far more than your normal tone 😂💕. It almost makes me wanna come and apologize immediately... 🏃‍♂️💨🥺
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             Sending that <strong>"Heyyy Moni, it's Krish"</strong> 💬✨ is one of the best decisions I've ever made. 💖 You deserve the worlddd, sweetheart. 🌎💕 Love you loadssss di myruuuuu. 😘💞
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             I stayyyyy with yewwwwwww no matter whattttttt. 🫂❤️✨
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             Cutieee patoootieeeee, woookieeee, cooookieeee 🍪🐻💕, happy 26! 🎂🥳🎉
           </p>
-          <p style={{ marginBottom: '1.5rem' }}>
+          <p className="fade-up" style={{ marginBottom: '1.5rem' }}>
             May your standards double 📈✨, wealth prosper 💰💖, and health multiply 🌿💪❤️.<br />
             May you get anything and everything you deserveeeee. 🌟🎁💕
           </p>
-          <p style={{ marginTop: '3rem', fontSize: '1.6rem', color: '#FF6B6B', fontStyle: 'italic' }}>
+          <p className="fade-up" style={{ marginTop: '3rem', fontSize: '1.6rem', color: '#FF6B6B', fontStyle: 'italic' }}>
             <strong>– Your pookieeeee Krishhhhh</strong> 💖🫶🥹✨
           </p>
         </div>
