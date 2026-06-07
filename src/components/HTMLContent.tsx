@@ -69,8 +69,8 @@ export default function HTMLContent() {
 
   return (
     <div id="main-content" ref={containerRef} style={{ position: 'relative', zIndex: 10 }}>
-      {/* Audio Element - Happy Birthday Piano (Public Domain) */}
-      <audio ref={audioRef} loop src="https://upload.wikimedia.org/wikipedia/commons/6/69/Happy_Birthday_to_You_%28Piano%29.ogg" />
+      {/* Audio Element - Happy Birthday Short MP3 */}
+      <audio ref={audioRef} loop src="https://raw.githubusercontent.com/KhuongNC/HappyBirthday/master/Mp3_hbd.mp3" />
       
       {/* Fixed UI */}
       <div style={{ position: 'fixed', top: '2rem', right: '2rem', zIndex: 50 }}>

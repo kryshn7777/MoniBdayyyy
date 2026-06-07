@@ -59,7 +59,7 @@ export default function ScrollSequence() {
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top top",
-        end: "+=100%", // Pin and scroll for 100% of viewport height (faster swiping)
+        end: "+=40%", // Super short and fast swiping sequence
         scrub: 0.5,
         pin: true,
         onUpdate: render
