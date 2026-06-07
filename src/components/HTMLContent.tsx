@@ -16,6 +16,13 @@ export default function HTMLContent() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    // Animate hero text immediately on load without ScrollTrigger (fixes Android visibility issues)
+    gsap.fromTo('.hero-text', 
+      { opacity: 0, y: 40 }, 
+      { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.3 }
+    );
+
+    // Animate everything else on scroll
     gsap.utils.toArray('.fade-up').forEach((el: any) => {
       gsap.fromTo(el, 
         { opacity: 0, y: 40 }, 
@@ -93,7 +100,7 @@ export default function HTMLContent() {
       </div>
 
       {/* Section 1: The Landing */}
-      <section style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ height: '100dvh', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
         
         {/* Dreamy Memory Backdrop */}
         <div className="hero-images" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1, pointerEvents: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '5vh 10vw', overflow: 'hidden' }}>
@@ -113,15 +120,15 @@ export default function HTMLContent() {
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(11,12,16,0.3) 0%, rgba(11,12,16,1) 85%)', pointerEvents: 'none' }}></div>
         </div>
 
-        <div style={{ zIndex: 1, position: 'relative', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          <h2 className="fade-up" style={{ fontSize: '3rem', color: '#FF6B6B', textShadow: '0 2px 15px rgba(255,107,107,0.5)', letterSpacing: '2px', fontWeight: 'bold' }}>
+        <div style={{ zIndex: 10, position: 'relative', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem', padding: '0 5vw' }}>
+          <h2 className="hero-text" style={{ fontSize: '3rem', color: '#FF6B6B', textShadow: '0 2px 15px rgba(255,107,107,0.5)', letterSpacing: '2px', fontWeight: 'bold' }}>
             It is ur special dayyy 🥳✨
           </h2>
-          <h1 className="fade-up hero-h1" style={{ fontSize: '4vw', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
+          <h1 className="hero-text hero-h1" style={{ fontSize: '4vw', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
             A year ago, one text changed everything...
           </h1>
         </div>
-        <div className="fade-up" style={{ position: 'absolute', bottom: '10vh', animation: 'pulse 2s infinite', zIndex: 1 }}>
+        <div className="hero-text" style={{ position: 'absolute', bottom: '10vh', animation: 'pulse 2s infinite', zIndex: 10 }}>
           <ArrowDown size={32} color="#FF6B6B" />
         </div>
       </section>
