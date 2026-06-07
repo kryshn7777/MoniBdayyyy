@@ -113,9 +113,14 @@ export default function HTMLContent() {
           <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(11,12,16,0.3) 0%, rgba(11,12,16,1) 85%)', pointerEvents: 'none' }}></div>
         </div>
 
-        <h1 className="fade-up hero-h1" style={{ fontSize: '4vw', textAlign: 'center', textShadow: '0 4px 20px rgba(0,0,0,0.8)', zIndex: 1, position: 'relative' }}>
-          A year ago, one text changed everything...
-        </h1>
+        <div style={{ zIndex: 1, position: 'relative', textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <h2 className="fade-up" style={{ fontSize: '3rem', color: '#FF6B6B', textShadow: '0 2px 15px rgba(255,107,107,0.5)', letterSpacing: '2px', fontWeight: 'bold' }}>
+            It is ur special dayyy 🥳✨
+          </h2>
+          <h1 className="fade-up hero-h1" style={{ fontSize: '4vw', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>
+            A year ago, one text changed everything...
+          </h1>
+        </div>
         <div className="fade-up" style={{ position: 'absolute', bottom: '10vh', animation: 'pulse 2s infinite', zIndex: 1 }}>
           <ArrowDown size={32} color="#FF6B6B" />
         </div>
