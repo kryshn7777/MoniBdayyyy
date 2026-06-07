@@ -208,6 +208,9 @@ export default function HTMLContent() {
           <p className="fade-up" style={{ marginTop: '3rem', fontSize: '1.6rem', color: '#FF6B6B', fontStyle: 'italic' }}>
             <strong>– Your pookieeeee Krishhhhh</strong> 💖🫶🥹✨
           </p>
+          <p className="fade-up" style={{ marginTop: '2rem', fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', fontStyle: 'italic', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
+            once again happpieeeeeee birthdayyyyyyyy and sorrrryyy for the late wishessss I got multiple errors trying to make this wensite 😢
+          </p>
         </div>
       </section>
       
